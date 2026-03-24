@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b1uhffqvv5he3"]
+
+[ext_resource type="Script" uid="uid://deffqjl8o0ay6" path="res://joystick.gd" id="1_413m4"]
+[ext_resource type="Texture2D" uid="uid://c4sqbaqdmah24" path="res://Joystick/ChatGPT_Image_Mar_10__2026__05_48_51_PM-removebg-preview.png" id="1_w25ul"]
+[ext_resource type="Texture2D" uid="uid://cjn4h1u6mnr74" path="res://Joystick/ChatGPT_Image_Mar_10__2026__05_50_06_PM-removebg-preview.png" id="2_dm1l1"]
+
+[node name="Joystick" type="Control" unique_id=1232755326]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -408.0
+offset_right = 612.0
+grow_vertical = 0
+script = ExtResource("1_413m4")
+
+[node name="JoystickBase" type="TextureRect" parent="." unique_id=2057007898]
+layout_mode = 1
+offset_right = 612.0
+offset_bottom = 408.0
+texture = ExtResource("1_w25ul")
+
+[node name="JoystickKnob" type="TextureRect" parent="." unique_id=1177982185]
+layout_mode = 1
+offset_right = 612.0
+offset_bottom = 408.0
+texture = ExtResource("2_dm1l1")

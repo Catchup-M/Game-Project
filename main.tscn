@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dr20wg3ubitt0"]
+
+[ext_resource type="PackedScene" uid="uid://b1uhffqvv5he3" path="res://joystick.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bkvqtcwq8sdal" path="res://hud.gd" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://rs0rs14m7416" path="res://pause (1)/file_00000000cbcc7246b25b23eb5d71cacb-removebg-preview.png" id="3_h2yge"]
+
+[node name="Main" type="Node3D" unique_id=1002040191]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=843868240]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1601784189]
+
+[node name="Joystick" parent="CanvasLayer" unique_id=1232755326 instance=ExtResource("1_ig7tw")]
+
+[node name="HUD" type="Control" parent="CanvasLayer" unique_id=1721510387]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_0xm2m")
+
+[node name="PlayerBG" type="ColorRect" parent="CanvasLayer/HUD" unique_id=1120482583]
+layout_mode = 1
+offset_left = 155.0
+offset_top = 10.0
+offset_right = 755.0
+offset_bottom = 30.0
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="PlayerFill" type="ColorRect" parent="CanvasLayer/HUD" unique_id=245622464]
+layout_mode = 1
+offset_left = 155.0
+offset_top = 10.0
+offset_right = 755.0
+offset_bottom = 30.0
+color = Color(0.70015657, 0.70015657, 0.7001565, 1)
+
+[node name="EnemyBG" type="ColorRect" parent="CanvasLayer/HUD" unique_id=909822908]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -740.0
+offset_top = 10.0
+offset_right = -140.0
+offset_bottom = 30.0
+grow_horizontal = 0
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="EnemyFill" type="ColorRect" parent="CanvasLayer/HUD" unique_id=520087303]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -740.0
+offset_top = 10.0
+offset_right = -140.0
+offset_bottom = 30.0
+grow_horizontal = 0
+color = Color(0.7019608, 0.7019608, 0.7019608, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HUD" unique_id=60516604]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -242.0
+offset_top = -539.0
+offset_right = 258.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_h2yge")
